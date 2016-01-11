@@ -19,6 +19,11 @@ server  = '192.168.202.33'
 fakesrc = '1.1.1.1'
 
 srcport  = RandNum(1024,65535)
+mypacket = IP(dst=server, src=ipv4)/UDP(sport=srcport,dport=10000)/message
+l2packet = Ether()/mypacket
+sendp(l2packet)
+
+srcport  = RandNum(1024,65535)
 mypacket = IP(dst=server, src=fakesrc)/UDP(sport=srcport,dport=10000)/message
 l2packet = Ether()/mypacket
 sendp(l2packet)
