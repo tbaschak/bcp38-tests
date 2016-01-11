@@ -13,7 +13,7 @@ if r.status_code == 200:
 else:
     ipv4 = 'err'
 
-message = "This is a test message from\n%s" % ipv4
+message = "%s" % ipv4
 
 server  = '192.168.202.33'
 fakesrc = '1.1.1.1'
@@ -25,7 +25,7 @@ sendp(l2packet)
 
 for x in range(0, 20):
     srcport  = RandNum(1024,65535)
-    fakesrc  = RandIP("0.0.0.0/1")
+    fakesrc  = RandIP()
     mypacket = IP(dst=server, src=RandIP())/UDP(sport=srcport,dport=10000)/message
     l2packet = Ether()/mypacket
     sendp(l2packet)
