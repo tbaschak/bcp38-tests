@@ -17,7 +17,7 @@ else:
 # Create a UDP socket
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
-server_address = ('localhost', 10000)
+server_address = ('192.168.203.22', 10000)
 message = "This is a test message from\n%s" % ipv4
 
 try:
