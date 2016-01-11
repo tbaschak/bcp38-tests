@@ -1,2 +1,2 @@
 # bcp38-tests
-Go and/or Python and/or C? client/server utilities to test for BCP38 compliance.
+Python client/server utility to test for BCP38 compliance.
