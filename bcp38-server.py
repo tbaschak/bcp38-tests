@@ -22,7 +22,7 @@ while True:
     src_ip = responselines[0]
     udp_ip = address[0]
 
-    if src_ip is udp_ip:
+    if src_ip == udp_ip:
         print "udp src IP %s matches packet contents ip %s" % (udp_ip, src_ip)
     else:
         print "udp src IP %s DOES NOT MATCH packet contents ip %s" % (udp_ip, src_ip)
